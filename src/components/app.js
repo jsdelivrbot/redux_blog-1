@@ -5,7 +5,9 @@ export default class App extends Component {
     return (
       <div>
       	Parent route (app.js)
-      	{this.props.children} (Nested/children routes)
+      	"this.props.children": 
+      	{this.props.children} 
+      	Above line is (Nested/children routes)
       </div>
 
     );

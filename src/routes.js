@@ -1,5 +1,5 @@
 import React from 'react';
-//Route: maps between paths and components
+//Route: maps between URL paths and components
 //IndexRoute:
 import { Route, IndexRoute } from 'react-router';
 
