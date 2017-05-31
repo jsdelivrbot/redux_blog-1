@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 //import { bindActionCreators } from 'redux';
 import { fetchPosts } from '../actions/index';
+import { Link } from 'react-router';
 
 class PostsIndex extends Component {
 	//dispatch an action whenever the PostsIndex component is about to be rendered/mounted on the DOM
@@ -11,7 +12,13 @@ class PostsIndex extends Component {
 
 	render (){
 		return (
-			<div>List of blog posts</div>
+			<div>
+				<div className="text-xs-right">
+					<Link to="" className="">
+					</Link>
+				</div>
+				List of blog posts
+			</div>
 		)
 	}
 }
