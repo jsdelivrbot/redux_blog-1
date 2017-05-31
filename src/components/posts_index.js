@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { bindACtionCreators } from 'redux';
+//import { bindActionCreators } from 'redux';
 import { fetchPosts } from '../actions/index';
 
 class PostsIndex extends Component {
+	//dispatch an action whenever the PostsIndex component is about to be rendered/mounted on the DOM
 	componentWillMount (){
-		this.props.fetchPosts;
+		this.props.fetchPosts();
 	}
 
 	render (){
@@ -15,8 +16,13 @@ class PostsIndex extends Component {
 	}
 }
 
+//ES6 syntax + shortcut that replaces mapDispatchtoProps
+export default connect(null, { fetchPosts })(PostsIndex);
+
+/*
 function mapDispatchToProps (dispatch){
-	return bindACtionCreators({ fetchPosts }, dispatch);
+	return bindActionCreators({ fetchPosts }, dispatch);
 }
 
 export default connect(null, mapDispatchToProps)(PostsIndex);
+*/
